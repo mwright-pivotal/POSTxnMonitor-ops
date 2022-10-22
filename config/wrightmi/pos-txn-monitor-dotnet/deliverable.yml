@@ -1,0 +1,14 @@
+apiVersion: carto.run/v1alpha1
+kind: Deliverable
+metadata:
+  name: pos-txn-monitor-dotnet
+  labels:
+    app.kubernetes.io/part-of: tanzu-edge-pos
+    apps.tanzu.vmware.com/has-tests: "true"
+    apps.tanzu.vmware.com/workload-type: edge
+    app.kubernetes.io/component: deliverable
+    app.tanzu.vmware.com/deliverable-type: web
+spec:
+  source:
+    image: harbor.eqix.vmwedge.com/apps/pos-txn-monitor-dotnet-wrightmi-bundle:c1a3b5dc-668d-420c-af9b-eb6b0b256dd8
+
