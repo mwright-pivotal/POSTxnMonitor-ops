@@ -25,7 +25,7 @@ spec:
         carto.run/workload-name: pos-txn-monitor-dotnet
     spec:
       containers:
-      - image: harbor.eqix.vmwedge.com/apps/pos-txn-monitor-dotnet-wrightmi@sha256:fd40bf7c0e4465cf5cbc0c6bb130148564dc8142f752a17f7485b01e38abf175
+      - image: harbor.eqix.vmwedge.com/apps/pos-txn-monitor-dotnet-wrightmi@sha256:a412287cbd8091b8233155f0352e049ad6a162edc4bfc537f71452bc4488f4d4
         name: workload
         resources: {}
         securityContext:
