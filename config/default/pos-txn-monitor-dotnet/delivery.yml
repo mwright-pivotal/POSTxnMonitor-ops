@@ -50,7 +50,6 @@ metadata:
     app.kubernetes.io/component: run
     carto.run/workload-name: pos-txn-monitor-dotnet
 spec:
-  type: NodePort
   selector:
     app.kubernetes.io/component: run
     app.kubernetes.io/part-of: tanzu-edge-pos
