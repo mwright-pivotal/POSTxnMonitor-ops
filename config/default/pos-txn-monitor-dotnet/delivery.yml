@@ -32,7 +32,7 @@ spec:
         carto.run/workload-name: pos-txn-monitor-dotnet
     spec:
       containers:
-      - image: harbor.services.edge.wrightcode.io:9443/apps/pos-txn-monitor-dotnet-default@sha256:378e0308ffe9245b30ec9e7b74716ce555f239d5b920be6f202d515c41f99f56
+      - image: harbor.services.edge.wrightcode.io:9443/apps/pos-txn-monitor-dotnet-default@sha256:a5ec04067e69c9578af99698764228e1e6d7c5555857fcf4d6062fbccf388ace
         name: workload
         resources: {}
         securityContext:
