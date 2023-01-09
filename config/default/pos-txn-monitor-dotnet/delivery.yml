@@ -32,7 +32,37 @@ spec:
         carto.run/workload-name: pos-txn-monitor-dotnet
     spec:
       containers:
-      - image: harbor.services.edge.wrightcode.io:9443/apps/pos-txn-monitor-dotnet-default@sha256:8f2c4259f740eac630b3e49b28624bb5cdaf538169f640b6bc937b630b89b724
+      - env:
+        - name: RabbitMQ__Host
+          valueFrom:
+            secretKeyRef:
+              key: host
+              name: edge-pos-messaging-default-user
+              optional: false
+        - name: RabbitMQ__StreamPort
+          valueFrom:
+            secretKeyRef:
+              key: stream-port
+              name: edge-pos-messaging-default-user
+              optional: false
+        - name: RabbitMQ__Username
+          valueFrom:
+            secretKeyRef:
+              key: username
+              name: edge-pos-messaging-default-user
+              optional: false
+        - name: RabbitMQ__Password
+          valueFrom:
+            secretKeyRef:
+              key: password
+              name: edge-pos-messaging-default-user
+              optional: false
+        - name: POSTxnMonitor__StoreId
+          valueFrom:
+            configMapKeyRef:
+              key: POSTxnMonitor__StoreId
+              name: store-config
+        image: harbor.services.edge.wrightcode.io:9443/apps/pos-txn-monitor-dotnet-default@sha256:8f2c4259f740eac630b3e49b28624bb5cdaf538169f640b6bc937b630b89b724
         name: workload
         resources: {}
         securityContext:
