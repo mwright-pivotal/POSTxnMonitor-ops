@@ -62,7 +62,7 @@ spec:
             configMapKeyRef:
               key: POSTxnMonitor__StoreId
               name: store-config
-        image: harbor.services.edge.wrightcode.io:9443/apps/pos-txn-monitor-dotnet-default@sha256:6f6f79fed64fba257d133ca048efe4f3d04cec3432b8d32bb16e84cd4a599b62
+        image: harbor.services.edge.wrightcode.io:9443/apps/pos-txn-monitor-dotnet-default@sha256:fe6fc90a705f2c821ea39986eca5c606503ee437357941d4f0d45818bea08fbd
         name: workload
         resources: {}
         securityContext:
