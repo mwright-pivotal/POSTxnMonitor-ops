@@ -62,7 +62,7 @@ spec:
             configMapKeyRef:
               key: POSTxnMonitor__StoreId
               name: store-config
-        image: harbor.eqix.vmwedge.com/apps/pos-txn-monitor-dotnet-wrightmi@sha256:ea7bb6ec20d25710a6d8dbd8b1df0c2b6ffc6456296069544d77c3a362e4b941
+        image: harbor.eqix.vmwedge.com/apps/pos-txn-monitor-dotnet-wrightmi@sha256:d3aaead96f9437103e79fc15d400f6155e8ad6e05ca7942b96ad046e01cd0b4c
         name: workload
         resources: {}
         securityContext:
